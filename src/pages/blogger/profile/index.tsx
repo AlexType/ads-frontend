@@ -10,7 +10,7 @@ const { TabPane } = Tabs;
 const { TextArea } = Input;
 
 export const BloggerProfilePage = () => {
-  const { data: profile, isLoading } = useBloggerProfile();
+  const { data: profile, isLoading, error } = useBloggerProfile();
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
   const [form] = Form.useForm();
   const updateProfileMutation = useUpdateBloggerProfile();

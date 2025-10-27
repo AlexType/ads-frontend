@@ -56,7 +56,7 @@ export const AdvertiserCampaignsPage = () => {
     );
   }, [data?.campaigns, searchText]);
 
-  const handleTableChange: TableProps<Campaign>['onChange'] = (paginationInfo, filters, sorter) => {
+  const handleTableChange: TableProps<Campaign>['onChange'] = (paginationInfo) => {
     setPagination({
       current: paginationInfo.current || 1,
       pageSize: paginationInfo.pageSize || 10,
@@ -125,7 +125,7 @@ export const AdvertiserCampaignsPage = () => {
           <Button
             type="text"
             icon={<EditOutlined />}
-            onClick={() => message.info({ title: 'Редактирование в разработке' })}
+            onClick={() => message.info('Редактирование в разработке')}
           />
           <Button
             type="text"

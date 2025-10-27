@@ -1,6 +1,6 @@
-import { useState, useMemo } from 'react';
-import { Card, Table, Tag, Button, Space, Descriptions, Modal, App } from 'antd';
-import { EyeOutlined, CheckOutlined, EditOutlined, ClockCircleOutlined } from '@ant-design/icons';
+import { useState } from 'react';
+import { Card, Table, Tag, Button, Space, Modal, App } from 'antd';
+import { EyeOutlined, CheckOutlined, EditOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { axiosInstance } from 'shared/api/axios';
@@ -158,24 +158,24 @@ export const AdvertiserOrdersPage = () => {
           <Button
             icon={<EyeOutlined />}
             size="small"
-            onClick={() => navigate(`/orders/${record._id}`)}
+            onClick={() => navigate(`/orders/${record.id || record._id}`)}
           >
             Просмотр
           </Button>
-          {record.status === 'submitted' && (
+          {record.status === 'review' && (
             <>
               <Button
                 icon={<CheckOutlined />}
                 size="small"
                 type="primary"
-                onClick={() => handleApprove(record._id)}
+                onClick={() => handleApprove(record.id || record._id)}
               >
                 Принять
               </Button>
               <Button
                 icon={<EditOutlined />}
                 size="small"
-                onClick={() => handleRequestChanges(record._id)}
+                onClick={() => handleRequestChanges(record.id || record._id)}
               >
                 Правки
               </Button>

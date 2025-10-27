@@ -43,7 +43,7 @@ export const useLogin = () => {
 
   return useMutation({
     mutationFn: authApi.login,
-    onSuccess: (data) => {
+    onSuccess: () => {
       // Инвалидируем кеш профиля после успешного входа
       queryClient.invalidateQueries({ queryKey: ['auth-profile'] });
       queryClient.invalidateQueries({ queryKey: ['profile'] });

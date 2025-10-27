@@ -13,7 +13,7 @@ import {
   Typography,
   Tooltip,
 } from 'antd';
-import { DownloadOutlined, FilterOutlined, DollarOutlined, ClockCircleOutlined, CheckCircleOutlined } from '@ant-design/icons';
+import { DownloadOutlined, DollarOutlined, ClockCircleOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -41,7 +41,7 @@ import { usePayments } from 'features/payments/api/payments.api';
 import type { ColumnsType } from 'antd/es/table';
 import './payments.css';
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 const { RangePicker } = DatePicker;
 
 interface Payment {
@@ -75,7 +75,7 @@ const statusLabels: Record<string, string> = {
 
 const PaymentsPage: React.FC = () => {
   const [statusFilter, setStatusFilter] = useState<string>('all');
-  const [dateRange, setDateRange] = useState<any>(null);
+  // const [dateRange, setDateRange] = useState<any>(null);
   
   const { data, isLoading } = usePayments({
     status: statusFilter !== 'all' ? statusFilter : undefined,
@@ -183,7 +183,7 @@ const PaymentsPage: React.FC = () => {
         <Space>
           <RangePicker 
             format="DD.MM.YYYY"
-            onChange={setDateRange}
+            // onChange={setDateRange}
           />
           <Select
             value={statusFilter}
@@ -212,7 +212,7 @@ const PaymentsPage: React.FC = () => {
           <Card>
             <Statistic
               title="Общий заработок"
-              value={stats.totalEarnings || 0}
+              value={(stats as any).totalEarnings || 0}
               prefix={<DollarOutlined />}
               suffix="₽"
               valueStyle={{ color: '#3f8600' }}
@@ -223,7 +223,7 @@ const PaymentsPage: React.FC = () => {
           <Card>
             <Statistic
               title="Ожидает выплаты"
-              value={stats.pendingEarnings || 0}
+              value={(stats as any).pendingEarnings || 0}
               prefix={<ClockCircleOutlined />}
               suffix="₽"
               valueStyle={{ color: '#faad14' }}
@@ -234,7 +234,7 @@ const PaymentsPage: React.FC = () => {
           <Card>
             <Statistic
               title="Всего транзакций"
-              value={stats.totalPayments || 0}
+              value={(stats as any).totalPayments || 0}
               prefix={<CheckCircleOutlined />}
               valueStyle={{ color: '#1890ff' }}
             />

@@ -1,14 +1,13 @@
-import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Card, Spin, Descriptions, Tag, Button, Space, Row, Col, Avatar, Empty, Divider, Rate, App } from 'antd';
-import { StarOutlined, UserOutlined, MailOutlined, PhoneOutlined, GlobalOutlined, ArrowLeftOutlined, CheckCircleOutlined } from '@ant-design/icons';
+import { StarOutlined, MailOutlined, PhoneOutlined, GlobalOutlined, ArrowLeftOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import { useBloggerDetails } from 'features/search/api/search.api';
 import { formatNumber, formatCurrency } from 'shared/lib/utils/format';
 
 export const BloggerProfilePage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { message } = App.useApp();
+  const { message: _message } = App.useApp();
   
   const { data: blogger, isLoading } = useBloggerDetails(id || '');
 

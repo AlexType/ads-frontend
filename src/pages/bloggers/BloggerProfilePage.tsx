@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { Card, Spin, Descriptions, Tag, Button, Space, Row, Col, Avatar, Empty, Divider, Rate, App, Image } from 'antd';
-import { StarOutlined, MailOutlined, PhoneOutlined, GlobalOutlined, ArrowLeftOutlined, CheckCircleOutlined, EyeOutlined, LikeOutlined, CommentOutlined } from '@ant-design/icons';
+import { Card, Spin, Descriptions, Tag, Button, Space, Row, Col, Avatar, Empty, Divider, Rate, App } from 'antd';
+import { StarOutlined, GlobalOutlined, ArrowLeftOutlined, CheckCircleOutlined } from '@ant-design/icons';
 import { useBloggerDetails } from 'features/search/api/search.api';
 import { formatNumber, formatCurrency } from 'shared/lib/utils/format';
 import './BloggerProfilePage.css';
@@ -8,7 +8,7 @@ import './BloggerProfilePage.css';
 export const BloggerProfilePage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { message } = App.useApp();
+  const { message: _message } = App.useApp();
   
   const { data: blogger, isLoading } = useBloggerDetails(id || '');
 

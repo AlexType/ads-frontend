@@ -1,10 +1,9 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { Card, Select, Slider, Button, Row, Col, Spin, Tag, Empty, App } from 'antd';
 import { StarOutlined, EyeOutlined, UserOutlined } from '@ant-design/icons';
 import { useSearchBloggers } from 'features/search/api/search.api';
 import { formatNumber, formatCurrency } from 'shared/lib/utils/format';
 import { motion } from 'framer-motion';
-import type { Blogger } from 'shared/types';
 import './search.css';
 
 const { Option } = Select;

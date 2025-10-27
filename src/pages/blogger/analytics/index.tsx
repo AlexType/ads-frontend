@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Statistic, Select, Row, Col, Table, Typography, Space, Tag } from 'antd';
+import { Card, Statistic, Select, Row, Col, Table, Typography, Tag } from 'antd';
 import { 
   RiseOutlined, 
   TrophyOutlined, 
@@ -59,11 +59,11 @@ const BloggerAnalyticsPage: React.FC = () => {
 
   // Данные для графика роста подписчиков
   const followerGrowthChartData = {
-    labels: charts.followerGrowth?.map(item => item.month) || [],
+    labels: charts.followerGrowth?.map((item: any) => item.month) || [],
     datasets: [
       {
         label: 'Подписчики',
-        data: charts.followerGrowth?.map(item => item.subscribers) || [],
+        data: charts.followerGrowth?.map((item: any) => item.subscribers) || [],
         borderColor: 'rgb(75, 192, 192)',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         fill: true,
@@ -74,11 +74,11 @@ const BloggerAnalyticsPage: React.FC = () => {
 
   // Данные для графика вовлеченности
   const engagementChartData = {
-    labels: charts.engagement?.map(item => item.month) || [],
+    labels: charts.engagement?.map((item: any) => item.month) || [],
     datasets: [
       {
         label: 'Вовлеченность (%)',
-        data: charts.engagement?.map(item => item.engagement) || [],
+        data: charts.engagement?.map((item: any) => item.engagement) || [],
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         fill: true,
@@ -89,11 +89,11 @@ const BloggerAnalyticsPage: React.FC = () => {
 
   // Данные для графика заработка
   const earningsChartData = {
-    labels: charts.earnings?.map(item => item.month) || [],
+    labels: charts.earnings?.map((item: any) => item.month) || [],
     datasets: [
       {
         label: 'Заработок (₽)',
-        data: charts.earnings?.map(item => item.earnings) || [],
+        data: charts.earnings?.map((item: any) => item.earnings) || [],
         backgroundColor: 'rgba(54, 162, 235, 0.5)',
       },
     ],
@@ -199,7 +199,7 @@ const BloggerAnalyticsPage: React.FC = () => {
           <Card>
             <Statistic
               title="Общий охват"
-              value={overview.totalReach || 0}
+              value={(overview as any).totalReach || 0}
               prefix={<RiseOutlined />}
               valueStyle={{ color: '#3f8600' }}
             />
@@ -209,7 +209,7 @@ const BloggerAnalyticsPage: React.FC = () => {
           <Card>
             <Statistic
               title="Вовлеченность"
-              value={overview.totalEngagement || 0}
+              value={(overview as any).totalEngagement || 0}
               prefix={<TrophyOutlined />}
               valueStyle={{ color: '#cf1322' }}
             />
@@ -219,7 +219,7 @@ const BloggerAnalyticsPage: React.FC = () => {
           <Card>
             <Statistic
               title="Заработок"
-              value={overview.totalEarnings || 0}
+              value={(overview as any).totalEarnings || 0}
               prefix={<DollarOutlined />}
               suffix="₽"
               valueStyle={{ color: '#1890ff' }}
@@ -230,7 +230,7 @@ const BloggerAnalyticsPage: React.FC = () => {
           <Card>
             <Statistic
               title="Активных заказов"
-              value={overview.activeOrders || 0}
+              value={(overview as any).activeOrders || 0}
               prefix={<ShoppingOutlined />}
               valueStyle={{ color: '#722ed1' }}
             />

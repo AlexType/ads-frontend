@@ -3,7 +3,6 @@ import {
   UserOutlined, 
   ShoppingCartOutlined, 
   FileTextOutlined, 
-  RiseOutlined,
   DollarOutlined,
   TrophyOutlined,
   ScheduleOutlined,
