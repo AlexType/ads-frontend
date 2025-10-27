@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card, Button, Tag, Spin, Descriptions, Avatar, Row, Col, Tabs, Space, Divider, Typography, Modal, Form, Input, InputNumber, Select, message } from 'antd';
+import { Card, Button, Tag, Spin, Descriptions, Avatar, Row, Col, Tabs, Space, Divider, Typography, Modal, Form, Input, InputNumber, Select } from 'antd';
 import { StarOutlined, EditOutlined, GlobalOutlined, MailOutlined, PhoneOutlined, CheckCircleOutlined, SaveOutlined } from '@ant-design/icons';
 import { useBloggerProfile, useUpdateBloggerProfile } from 'features/profile/api/profile.api';
 import { formatNumber, formatCurrency } from 'shared/lib/utils/format';
@@ -10,7 +10,7 @@ const { TabPane } = Tabs;
 const { TextArea } = Input;
 
 export const BloggerProfilePage = () => {
-  const { data: profile, isLoading, error } = useBloggerProfile();
+  const { data: profile, isLoading } = useBloggerProfile();
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
   const [form] = Form.useForm();
   const updateProfileMutation = useUpdateBloggerProfile();

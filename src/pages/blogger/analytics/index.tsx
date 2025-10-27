@@ -52,7 +52,7 @@ const BloggerAnalyticsPage: React.FC = () => {
   }
 
   const overview = data?.overview || {};
-  const charts = data?.charts || {};
+  const charts = data?.charts || {} as any;
   const topPlatforms = data?.topPlatforms || [];
   const topAdvertisers = data?.topAdvertisers || [];
   const categoryStats = data?.categoryStats || [];

@@ -158,7 +158,7 @@ export const AdvertiserOrdersPage = () => {
           <Button
             icon={<EyeOutlined />}
             size="small"
-            onClick={() => navigate(`/orders/${record.id || record._id}`)}
+            onClick={() => navigate(`/orders/${record.id}`)}
           >
             Просмотр
           </Button>
@@ -168,14 +168,14 @@ export const AdvertiserOrdersPage = () => {
                 icon={<CheckOutlined />}
                 size="small"
                 type="primary"
-                onClick={() => handleApprove(record.id || record._id)}
+                onClick={() => handleApprove(record.id)}
               >
                 Принять
               </Button>
               <Button
                 icon={<EditOutlined />}
                 size="small"
-                onClick={() => handleRequestChanges(record.id || record._id)}
+                onClick={() => handleRequestChanges(record.id)}
               >
                 Правки
               </Button>

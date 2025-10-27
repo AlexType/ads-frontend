@@ -79,7 +79,7 @@ export const BloggerProfilePage = () => {
                   type="primary" 
                   size="large"
                   block
-                  onClick={() => message.info('Функция создания заказа в разработке')}
+                  onClick={() => _message.info('Функция создания заказа в разработке')}
                 >
                   Создать заказ
                 </Button>
