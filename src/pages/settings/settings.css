@@ -1,0 +1,27 @@
+.settings-page {
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.settings-container h2 {
+  margin-bottom: 24px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-card {
+  margin-bottom: 0;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+}
+
+

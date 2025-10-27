@@ -1,0 +1,56 @@
+.app-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Стили для уведомлений в хедере */
+.header-right > * {
+  display: flex;
+  align-items: center;
+}
+
+.header-right .ant-badge {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.header-right .ant-badge .ant-badge-count {
+  box-shadow: 0 0 0 1px #fff;
+}
+
+/* Стили для профиля пользователя */
+.user-profile-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.user-profile-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.user-profile-role {
+  margin: 0;
+  font-size: 12px;
+  color: #8c8c8c;
+}
+

@@ -1,0 +1,53 @@
+.admin-dashboard {
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.admin-dashboard .stat-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  background: #fff !important;
+}
+
+.admin-dashboard .stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard .stat-card .ant-card-body {
+  background: #fff !important;
+}
+
+.admin-dashboard .ant-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  background: #fff !important;
+}
+
+.admin-dashboard .ant-card-inner {
+  background: #fff !important;
+}
+
+.admin-dashboard .ant-card-body {
+  background: #fff !important;
+}
+
+.admin-dashboard .ant-statistic-title {
+  font-size: 14px;
+  color: #666;
+}
+
+.admin-dashboard .ant-statistic-content {
+  font-size: 24px;
+  color: #262626;
+}
+
+.admin-dashboard .ant-card-head {
+  background: #fff;
+}
+
+.admin-dashboard .ant-card-head-title {
+  color: #262626;
+}
+

@@ -1,0 +1,17 @@
+.orders-page {
+  padding: 24px;
+}
+
+.orders-stats {
+  margin-bottom: 24px;
+}
+
+.order-card {
+  margin-bottom: 16px;
+}
+
+.order-status-tag {
+  font-weight: 600;
+}
+
+

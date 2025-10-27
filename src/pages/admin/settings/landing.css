@@ -1,0 +1,13 @@
+.admin-landing-settings {
+  padding: 24px;
+}
+
+.admin-landing-settings .ant-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-landing-settings .ant-card-inner {
+  background: #fafafa;
+}
+
+
